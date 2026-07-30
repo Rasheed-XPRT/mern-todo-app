@@ -1,0 +1,98 @@
+.task{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    border-radius:8px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.08);
+}
+
+.task-actions{
+
+    display:flex;
+
+    gap:10px;
+}
+
+
+.completed{
+    text-decoration: line-through;
+    color:gray;
+    opacity:.7;
+}
+
+
+/* Individual task card layout configuration box */
+.task {
+    background-color: var(--bg-card); /* Changes automatically with theme */
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 🚀 FIX 1: Explicitly tie the task title color to your primary text theme token */
+.task h3 {
+    color: var(--text-primary) !important; 
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* 🚀 FIX 2: Modern dark-theme compatible styling for completed tasks */
+.task h3.completed {
+    color: var(--text-secondary) !important; /* Muted gray text color */
+    text-decoration: line-through;            /* Line through the task name */
+    opacity: 0.6;                            /* Slightly faded out */
+}
+
+/* Status paragraph description text styling */
+.task p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Edit text input adjustments inside the item card layout block */
+.task input {
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+}
+
+
+/* Layout alignment box wrapper for metadata fields */
+.task-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 6px;
+}
+
+/* Base styles for the small date labels using theme text variables */
+.task-dates small {
+    font-size: 11px;
+    color: var(--text-secondary);
+    opacity: 0.85;
+    transition: color 0.3s ease;
+}

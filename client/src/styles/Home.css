@@ -1,0 +1,112 @@
+.home{
+
+    width:90%;
+
+    max-width:800px;
+
+    margin:40px auto;
+}
+
+.home h1{
+
+    margin-bottom:25px;
+
+    text-align:center;
+}
+
+.search-box{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:20px;
+
+    border-radius:6px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+}
+
+.filters{
+
+display:flex;
+
+gap:10px;
+
+margin-bottom:20px;
+}
+
+.filters button{
+
+padding:10px 16px;
+
+border:none;
+
+border-radius:6px;
+
+background:#ddd;
+}
+
+.filters button:hover{
+
+background:#bbb;
+}
+.filters button.active{
+
+background:#bbb;
+}
+
+.dark{
+
+    background:#121212;
+    
+    color:white;
+    
+    min-height:100vh;
+    }
+
+
+
+    /* ==========================================
+   1. Theme Theme Tokens (Variables)
+   ========================================== */
+.light-theme {
+    --bg-app: #f7fafc;
+    --bg-card: #ffffff;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --border-color: #e2e8f0;
+    --input-bg: #ffffff;
+}
+
+.dark-theme {
+    --bg-app: #0f172a;       /* Slate midnight background */
+    --bg-card: #1e293b;      /* Slightly lighter card background */
+    --text-primary: #f8fafc;  /* Crisp white text */
+    --text-secondary: #94a3b8;/* Muted gray text */
+    --border-color: #334155;  /* Dark subtle borders */
+      
+    --input-bg: #334155;     /* Dark input fields */
+}
+
+/* ==========================================
+   2. Global Viewport Target Fixing 🚀
+   ========================================== */
+
+/* This forces the wrapper div to expand and fully cover your monitor window screen layout bounds */
+.light-theme, .dark-theme {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--bg-app) !important; /* Forces the color to apply */
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure the main page block container has no hardcoded background overrides */
+.home {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
